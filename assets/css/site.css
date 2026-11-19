@@ -382,9 +382,11 @@ a.btn.luma-checkout--button:hover { background: var(--pink-hover) !important; }
   margin-top: 8px; border-radius: 14px; overflow: hidden;
   background: var(--forest-deep); border: 1px solid var(--line);
 }
-.luma-frame iframe { display: block; width: 100%; height: 520px; border: 0; background: #FFFFFF; }
+/* Tall enough for Luma's whole card (measured about 810px at phone width, 795px wider) so it never scrolls inside */
+.luma-frame iframe { display: block; width: 100%; height: 880px; border: 0; background: #FFFFFF; }
+@media (max-width: 359px) { .luma-frame iframe { height: 960px; } }
 .luma-frame.is-loaded { border-color: rgba(191, 203, 218, 0.53); }
 .luma-consent { padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 .luma-consent p { margin: 0; font-size: 15px; color: var(--sage); }
 .luma-consent a { color: var(--pink); font-size: 15px; }
-@media (min-width: 600px) { .luma-frame iframe { height: 480px; } }
+@media (min-width: 600px) { .luma-frame iframe { height: 860px; } }
