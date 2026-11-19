@@ -594,3 +594,14 @@ main.policy    { background-position: right -200px top -80px; }
 }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* Cream cards: the four at-a-glance facts and the three promises.
+   Pink is deepened slightly on cream so the labels and icons stay readable. */
+.facts-section .facts li, .promises .card {
+  background: var(--cream); color: var(--forest); border: 0;
+  box-shadow: 0 1px 0 rgba(24, 50, 35, 0.25);
+}
+.facts-section .facts strong, .promises .card h3 { color: var(--forest); }
+.facts-section .facts span, .promises .card p { color: var(--forest); }
+.promises .card .tbc { color: #4E6B55; }
+.facts-section .fact-icon, .promises .card .kicker { color: #B4466E; }
