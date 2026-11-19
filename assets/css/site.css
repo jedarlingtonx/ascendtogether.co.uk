@@ -675,3 +675,6 @@ main.policy    { background-position: right -200px top -80px; }
 @media (max-width: 959px) {
   .about-grid .placeholder-box { justify-self: center; width: 100%; max-width: 368px; }
 }
+
+/* Events page: cream outline around the event card */
+#events .event-card { border: 1px solid var(--cream); }
