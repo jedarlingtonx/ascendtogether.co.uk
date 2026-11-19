@@ -670,3 +670,8 @@ main.policy    { background-position: right -200px top -80px; }
   .footer-links { order: 4; margin: 12px 0 4px; }
   .footer-legal { margin: 0; }
 }
+
+/* About: centre the founder portrait when it stacks above the text */
+@media (max-width: 959px) {
+  .about-grid .placeholder-box { justify-self: center; width: 100%; max-width: 368px; }
+}
