@@ -646,3 +646,5 @@ main.policy    { background-position: right -200px top -80px; }
 /* Hero photo placeholder on cream */
 .photo-frame { background: var(--cream); }
 .photo-frame .caption { background: var(--forest); color: var(--cream); }
+.photo-frame { justify-content: center; }
+.photo-frame .caption { text-align: center; }
