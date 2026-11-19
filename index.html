@@ -32,12 +32,12 @@
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Sections">
       <ul>
-        <li><a href="/"><span class="num">01</span>Home</a></li>
-        <li><a href="/#join"><span class="num">02</span>Join us</a></li>
-        <li><a href="/events"><span class="num">03</span>Events</a></li>
-        <li><a href="/about"><span class="num">04</span>About</a></li>
-        <li><a href="/#involved"><span class="num">05</span>Get involved</a></li>
-        <li><a href="/contact"><span class="num">06</span>Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#join">Join us</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/#involved">Get involved</a></li>
+        <li><a href="/contact">Contact</a></li>
         <li class="nav-cta"><a class="btn btn-block" href="/#seat">Ask for a seat</a></li>
       </ul>
     </nav>
@@ -46,12 +46,12 @@
 
 <main id="main">
 
-<!-- 01 Home -->
+<!-- Home -->
 <section id="home" class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">01 · A community for mid-career people</p>
+        <p class="eyebrow">A community for mid-career people</p>
         <h1>For people who <em>share the climb.</em></h1>
         <p class="hero-intro">Ascend Together is a community for mid-career people who share the climb: tackling the steep sections, exploring new terrain and celebrating the summits.</p>
         <p>For people building their careers, not starting them, whether employed or running their own business. People who want to keep growing, are as happy to give support as to receive it, and come for real conversation.</p>
@@ -66,6 +66,12 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- At a glance -->
+<section class="facts-section" aria-label="At a glance">
+  <div class="wrap">
     <ul class="facts">
       <li><strong>Every other month</strong><span>Small evening events</span></li>
       <li><strong>7 to 9pm</strong><span>On a Monday or Tuesday</span></li>
@@ -73,7 +79,17 @@
       <li><strong>Hosted introductions</strong><span>You won't walk in alone</span></li>
     </ul>
 
-    <div class="promises">
+    <a class="next-teaser" href="/events">
+      <span class="label">Next evening</span>
+      <span class="title">[DATE] · [TOPIC] with [SPEAKER]</span>
+      <span>See what to expect →</span>
+    </a>
+  </div>
+</section>
+
+<!-- Our promises -->
+<section id="promises" class="section promises">
+  <div class="wrap">
       <h2>Our promises</h2>
       <p class="tbc">[Agreed promise wording to drop in. Draft lines shaped by the survey.]</p>
       <div class="promise-grid">
@@ -93,20 +109,12 @@
           <p class="tbc">[Promise wording: answers "events with no real point"]</p>
         </article>
       </div>
-    </div>
-
-    <a class="next-teaser" href="/events">
-      <span class="label">Next evening</span>
-      <span class="title">[DATE] · [TOPIC] with [SPEAKER]</span>
-      <span>See what to expect →</span>
-    </a>
   </div>
 </section>
 
-<!-- 02 Want to join us -->
+<!-- Want to join us -->
 <section id="join" class="section on-cream">
   <div class="wrap">
-    <p class="eyebrow">02</p>
     <h2 class="section-title">Want to join us?</h2>
     <p class="lede">Ascend Together is invite-only, so the group can grow without being open. Here's how a seat happens.</p>
 
@@ -140,7 +148,7 @@
           <div class="field"><label for="i-name">Name</label><input class="input" id="i-name" name="name" type="text" autocomplete="name" required></div>
           <div class="field"><label for="i-email">Email</label><input class="input" id="i-email" name="email" type="email" autocomplete="email" required></div>
           <div class="field"><label for="i-rec">Anyone who could introduce you? <span class="hint">(optional)</span></label><input class="input" id="i-rec" name="possible_introducer" type="text"></div>
-          <label class="check"><input type="checkbox" name="marketing_consent" required>I'd like to hear about Ascend Together by email. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</label>
+          <label class="check"><input type="checkbox" name="marketing_consent" required><span>I'd like to hear about Ascend Together by email. I can unsubscribe at any time. See the <a href="/privacy">privacy policy</a>.</span></label>
           <div class="form-foot"><button class="btn-outline" type="submit">Register interest</button></div>
         </div>
         <p class="form-note" role="status" hidden data-thanks="Thanks, {name}. You're on the list. (Concept only: nothing was sent.)"></p>
@@ -149,11 +157,10 @@
   </div>
 </section>
 
-<!-- 05 Get involved -->
+<!-- Get involved -->
 <section id="involved" class="section">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">05</p>
       <h2 class="section-title">Get involved</h2>
       <p>The community is built together, not just attended. Offer to speak, introduce someone who'd fit, or share an idea for a future evening.</p>
     </div>
@@ -170,7 +177,7 @@
         <div class="field"><label for="g-name">Name</label><input class="input" id="g-name" name="name" type="text" autocomplete="name" required></div>
         <div class="field"><label for="g-email">Email</label><input class="input" id="g-email" name="email" type="email" autocomplete="email" required></div>
         <div class="field full"><label for="g-msg">Tell us a little more</label><textarea class="input" id="g-msg" name="message" rows="4"></textarea></div>
-        <label class="check full"><input type="checkbox" name="consent" required>I agree to my details being stored to reply to me, as set out in the <a href="/privacy">privacy policy</a>.</label>
+        <label class="check full"><input type="checkbox" name="consent" required><span>I agree to my details being stored to reply to me, as set out in the <a href="/privacy">privacy policy</a>.</span></label>
         <div class="form-foot full"><button class="btn" type="submit">Send</button></div>
       </div>
       <p class="form-note" role="status" hidden data-thanks="Thanks, {name}. We'll get back to you. (Concept only: nothing was sent.)"></p>
@@ -182,16 +189,22 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span class="footer-brand">Ascend Together</span>
-    <nav class="footer-nav" aria-label="Legal and social">
+    <div class="footer-main">
+      <span class="footer-brand">Ascend Together</span>
+      <p class="footer-meta">© <span class="js-year">2026</span> Ascend Together · ascendtogether.co.uk</p>
+      <p class="credit"><svg class="factory" width="22" height="22" viewBox="0 0 512 512" fill="none" stroke="currentColor" stroke-width="26" aria-hidden="true"><path d="M30 464H480"/><path d="M70 464V268L195 205V268L325 205V268L445 205V464"/><path d="M347 250L359 45H413L425 205"/><path d="M362 78H410"/><rect x="120" y="318" width="64" height="64"/><rect x="226" y="318" width="64" height="64"/><rect x="331" y="318" width="64" height="64"/></svg><span>Another small community site, sorted, by <a href="https://pixel-north.co.uk/" target="_blank" rel="noopener">Pixel North</a>.</span></p>
+      <!-- Social links TBC: replace each href="#" with the real profile URL. -->
+      <div class="social">
+        <a href="#" aria-label="Ascend Together on LinkedIn (link to come)"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.65-1.61-2.65-1.62 0-1.86 1.26-1.86 2.56v4.93h-4v-11z"/></svg></a>
+        <a href="#" aria-label="Ascend Together on Instagram (link to come)"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+    <nav class="footer-legal" aria-label="Legal">
       <a href="/privacy">Privacy policy</a>
       <a href="/cookies">Cookie policy</a>
       <a href="/terms">Terms of use</a>
       <button type="button" class="js-cookie-settings">Cookie settings</button>
-      <a href="#" aria-disabled="true">LinkedIn <span class="tbc">[link TBC]</span></a>
-      <a href="#" aria-disabled="true">Instagram <span class="tbc">[link TBC]</span></a>
     </nav>
-    <p class="footer-meta">© <span class="js-year">2026</span> Ascend Together · ascendtogether.co.uk</p>
   </div>
 </footer>
 

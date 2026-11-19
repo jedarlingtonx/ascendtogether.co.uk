@@ -27,6 +27,8 @@ Concept website for Ascend Together: a small, mobile-first static site built fro
 
 - **Luma:** the Events button links to the Luma event. `site.js` loads Luma's checkout script only after cookie consent; without it the button opens the event on luma.com. The "Ask for a seat" embed (`.js-luma-embed`) loads after consent too, or when the visitor presses "Show the booking form". For a new event, change the event ID in the button's `href` and `data-luma-event-id`, and in the embed's `data-src` and fallback link. Keep the Luma event set to require approval, with the location hidden until approved.
 - **Forms:** replace each `.js-placeholder-form` with the chosen form embed (HubSpot, Luma or other).
+- **Luma consent (staging):** `STAGING_AUTO_LOAD_LUMA` in `assets/js/site.js` is `true`, so Luma loads without waiting for cookie consent. Set it to `false` before launch.
+- **Social links:** replace the `href="#"` LinkedIn and Instagram links in each page's footer.
 - **Launch:** remove the `noindex` meta tags, the `X-Robots-Tag` line in `_headers`, the `robots.txt` block and the concept bar at the top of `index.html`.
 
 ## Run it locally
