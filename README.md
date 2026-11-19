@@ -2,7 +2,7 @@
 
 Concept website for Ascend Together: a small, mobile-first static site built from the visual concept. Plain HTML, CSS and a little JavaScript, with no build step.
 
-**This is a concept.** "Ask for a seat" is the real Luma registration embed, and the Events section has the Luma button. The other forms are placeholders and send nothing. Copy in `[square brackets]` is still to be written. The logo and fonts (Fraunces, DM Sans) are placeholders too. The whole site is set to `noindex` until launch.
+**This is a concept.** "Ask for a seat" on the home page and the Events page both use the Luma registration button, which opens Luma's form over the page. The other forms are placeholders and send nothing. Copy in `[square brackets]` is still to be written. The logo and fonts (Fraunces, DM Sans) are placeholders too. The whole site is set to `noindex` until launch.
 
 ## What's here
 
