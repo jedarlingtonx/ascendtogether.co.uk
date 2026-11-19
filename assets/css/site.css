@@ -547,10 +547,7 @@ main.policy    { background-position: right -200px top -80px; }
   background: rgba(24, 50, 35, 0.55); border: 1px solid var(--line); border-radius: 14px;
   padding: 18px 16px 20px; position: relative;
 }
-.facts-section .facts li::before {
-  content: ""; display: block; width: 24px; height: 2px; border-radius: 2px;
-  background: var(--pink); margin-bottom: 14px;
-}
+.facts-section .fact-icon { display: block; width: 28px; height: 28px; color: var(--pink); margin-bottom: 12px; }
 .facts-section .facts strong { font-size: 20px; }
 @media (min-width: 600px) and (max-width: 959px) {
   .facts-section .facts { grid-template-columns: 1fr 1fr; gap: 16px; }
