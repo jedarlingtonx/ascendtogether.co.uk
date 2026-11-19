@@ -506,3 +506,37 @@ section.promises { margin-top: 0; }
 .on-cream .event-card { color: var(--cream); }
 .on-cream .event-card .tbc { color: var(--sage); }
 .on-cream .event-card a:not(.btn) { color: var(--pink); }
+
+/* Background hoops: the three-ring mark from the hero, faint and tucked off the edges.
+   Background images only, so they never sit over text or take clicks. */
+.hero, .facts-section, .promises, #join, #involved, #events, #about, #contact, main.policy, .site-footer {
+  background-repeat: no-repeat;
+  background-size: var(--hoops-size, 340px) auto;
+}
+.hero, .promises, #involved, #events, #contact, main.policy, .site-footer, .facts-section, #about { background-image: url("/assets/img/hoops-dark.svg"); }
+#join { background-image: url("/assets/img/hoops-light.svg"); }
+
+.hero          { background-position: left -170px bottom -120px; }
+.facts-section { background-position: right -190px top -150px; }
+.promises      { background-position: left -180px bottom -150px; }
+#join          { background-position: right -170px top -110px; }
+#involved      { background-position: left -200px top -90px; }
+#events        { background-position: right -180px top -60px; }
+#about         { background-position: right -170px bottom -140px; }
+#contact       { background-position: left -190px bottom -130px; }
+main.policy    { background-position: right -200px top -80px; }
+.site-footer   { background-position: right -150px bottom -200px; --hoops-size: 300px; }
+
+@media (min-width: 960px) {
+  :root { --hoops-size: 560px; }
+  .hero          { background-position: left -300px bottom -260px; }
+  .facts-section { background-position: right -260px center; --hoops-size: 460px; }
+  .promises      { background-position: left -320px bottom -240px; }
+  #join          { background-position: right -280px top -180px; }
+  #involved      { background-position: left -320px top -120px; }
+  #events        { background-position: right -300px top -40px; }
+  #about         { background-position: right -280px bottom -220px; }
+  #contact       { background-position: left -320px bottom -220px; }
+  main.policy    { background-position: right -260px top -60px; }
+  .site-footer   { background-position: right -200px bottom -300px; --hoops-size: 440px; }
+}
