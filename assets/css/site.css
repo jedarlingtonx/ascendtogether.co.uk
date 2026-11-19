@@ -698,3 +698,8 @@ main.policy    { background-position: right -200px top -80px; }
 @media (max-width: 959px) { .hero-grid .hero-actions .btn { animation-name: seat-pulse-float; } }
 .hero-grid .hero-actions .btn:hover, .hero-grid .hero-actions .btn:focus-visible { animation: none; }
 @media (prefers-reduced-motion: reduce) { .hero-grid .hero-actions .btn { animation: none; } }
+
+/* Same gentle pulse on the "Want to join us?" seat card button */
+.seat-card .btn { animation: seat-pulse 3.2s ease-out 1.2s infinite; }
+.seat-card .btn:hover, .seat-card .btn:focus-visible { animation: none; }
+@media (prefers-reduced-motion: reduce) { .seat-card .btn { animation: none; } }
