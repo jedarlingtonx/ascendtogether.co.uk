@@ -453,12 +453,12 @@ section.promises { margin-top: 0; }
 .brand { flex: none; }
 .brand svg { flex: none; }
 .brand-name { white-space: nowrap; }
-.seal--hero { display: none; }
-/* Phones: no room in the header, so the seal sits above the home page headline instead */
-@media (max-width: 599px) {
-  .brand-wrap .seal { display: none; }
-  .seal--hero { display: inline-block; margin-bottom: 16px; }
-}
+/* Seal sits just below the header line, lined up under the logo */
+.seal-row { padding-top: 16px; }
+.seal-row .seal { display: inline-block; }
+.seal-row + main .hero { padding-top: 24px; }
+.seal-row + main .policy { padding-top: 16px; }
+@media (min-width: 960px) { .seal-row + main .hero { padding-top: 48px; } }
 
 /* Footer bottom row: Pixel North credit, centred */
 .footer-bottom {
@@ -468,3 +468,4 @@ section.promises { margin-top: 0; }
 }
 .footer-bottom .credit { display: block; text-align: center; }
 .footer-bottom .credit .factory { display: inline-block; vertical-align: -5px; margin: 0 8px 0 0; }
+.seal-row + main > .section:first-child { padding-top: 32px; }
