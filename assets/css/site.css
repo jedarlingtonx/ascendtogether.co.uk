@@ -273,7 +273,6 @@ textarea.input { min-height: 96px; resize: vertical; }
 
 /* 05 + 06 */
 .split { display: grid; gap: 28px; }
-.contact-section { border-top: 1px solid rgba(168, 191, 163, 0.25); }
 
 /* Footer */
 .site-footer { background: var(--forest-deep); padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); font-size: 15px; }
