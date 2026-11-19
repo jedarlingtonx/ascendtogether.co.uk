@@ -612,3 +612,33 @@ main.policy    { background-position: right -200px top -80px; }
 .hero-grid .hero-actions .btn-ghost:hover, .hero-grid .hero-actions .btn-ghost:focus-visible {
   background: var(--cream); color: var(--forest); border-color: var(--cream);
 }
+
+/* Next evening banner: a solid pink highlight so it stands out against the cream cards */
+.facts-section .next-teaser {
+  background: var(--pink); color: var(--forest); border: 0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  gap: 12px; padding: 22px 20px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.facts-section .next-teaser:hover { background: var(--pink-hover); color: var(--forest); transform: translateY(-2px); }
+.facts-section .next-teaser:focus-visible { outline: 3px solid var(--cream); outline-offset: 3px; }
+.facts-section .next-teaser .label {
+  align-self: flex-start; padding: 6px 12px; border-radius: 999px;
+  background: var(--forest); color: var(--cream); font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+}
+.facts-section .next-teaser .title { font-size: 24px; line-height: 1.25; color: var(--forest); }
+.facts-section .next-teaser .more {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 0 20px; border-radius: 999px;
+  background: var(--forest); color: var(--cream); font-weight: 700;
+}
+.facts-section .next-teaser .more span { transition: transform 0.2s ease; }
+.facts-section .next-teaser:hover .more span { transform: translateX(3px); }
+@media (min-width: 600px) {
+  .facts-section .next-teaser { padding: 24px 28px; }
+  .facts-section .next-teaser .label, .facts-section .next-teaser .more { align-self: center; }
+  .facts-section .next-teaser .title { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .facts-section .next-teaser, .facts-section .next-teaser .more span { transition: none; transform: none; }
+}
