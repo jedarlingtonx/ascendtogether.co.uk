@@ -742,3 +742,10 @@ main.policy    { background-position: right -200px top -80px; }
   .footer-bottom { grid-template-columns: 1fr 1fr; }
   .footer-bottom .credit { grid-column: 1 / -1; order: 1; }
 }
+
+/* Divider line above the Back to top / socials row, not above the credit */
+.footer-bottom {
+  padding-top: 20px;
+  background: linear-gradient(var(--line), var(--line)) top center / calc(100% - 2 * var(--gutter)) 1px no-repeat;
+}
+.footer-bottom .credit { border-top: 0; padding-top: 4px; }
