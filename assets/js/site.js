@@ -104,6 +104,37 @@
     });
   });
 
+  // Reveal on scroll: sections' headings, cards and forms fade up gently as they
+  // come into view. Skipped for reduced motion or old browsers; content is never
+  // hidden unless this script runs.
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var groups = [
+      '.section-title', '#promises h2', '.lede', '.facts li', '.next-teaser', '.promise-grid > *',
+      '.steps > li', '.forms-grid > *', '.split > div > *', '.about-grid > div > *', '.split > *', '.event-grid > *',
+      '.about-grid > *', '.policy .prose > *'
+    ];
+    var items = [];
+    groups.forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el, i) {
+        if (!el.closest('main') || el.closest('.reveal') || el.querySelector('.reveal')) return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) return; // already on screen
+        var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+        el.style.setProperty('--reveal-delay', Math.min(sibs, 4) * 90 + 'ms');
+        el.classList.add('reveal');
+        items.push(el);
+      });
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+
   var year = document.querySelector('.js-year');
   if (year) year.textContent = new Date().getFullYear();
 })();
