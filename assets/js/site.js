@@ -48,6 +48,10 @@
   // Cookie banner. The only third-party script is Luma's registration embed,
   // loaded once the visitor accepts. Until then the Luma button is a plain link.
   var KEY = 'at-cookie-consent';
+
+  // STAGING ONLY: load Luma's embeds without waiting for cookie consent.
+  // Set this to false before launch so Luma waits for the visitor to accept.
+  var STAGING_AUTO_LOAD_LUMA = true;
   var loadLumaEmbed = function () {
     document.querySelectorAll('.js-luma-embed').forEach(function (box) {
       if (box.querySelector('iframe')) return;
@@ -65,6 +69,7 @@
     btn.addEventListener('click', loadLumaEmbed);
   });
   var loadLuma = function () {
+    loadLumaEmbed();
     if (!document.querySelector('.luma-checkout--button') || document.getElementById('luma-checkout')) return;
     var s = document.createElement('script');
     s.id = 'luma-checkout';
@@ -72,7 +77,6 @@
     s.async = true;
     document.body.appendChild(s);
     document.querySelectorAll('.luma-checkout--button').forEach(function (a) { a.removeAttribute('target'); });
-    loadLumaEmbed();
   };
   var banner = document.getElementById('cookie-banner');
   var read = function () { try { return localStorage.getItem(KEY); } catch (err) { return null; } };
@@ -80,6 +84,9 @@
   if (banner) {
     if (!read()) banner.hidden = false;
     if (read() === 'accepted') loadLuma();
+  }
+  if (STAGING_AUTO_LOAD_LUMA) loadLuma();
+  if (banner) {
     banner.addEventListener('click', function (e) {
       var choice = e.target.closest('[data-consent]');
       if (!choice) return;

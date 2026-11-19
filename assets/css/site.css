@@ -393,3 +393,52 @@ a.btn.luma-checkout--button:hover { background: var(--pink-hover) !important; }
 
 /* Current page in the main navigation */
 .site-nav a[aria-current="page"] { color: var(--pink); }
+
+/* At-a-glance band, then promises as their own section */
+.facts-section { background: var(--forest-mid); padding: 40px 0; }
+.facts-section .facts { margin: 0; padding: 0; border: 0; }
+.facts-section .next-teaser { margin-top: 32px; }
+.facts-section .next-teaser:hover { background: rgba(244, 143, 177, 0.08); }
+section.promises { margin-top: 0; }
+@media (min-width: 600px) { .facts-section { padding: 56px 0; } }
+
+/* "I'd like to…" choices: keep each radio and its label on one line, centred */
+.field .chip {
+  display: inline-flex; align-items: center; gap: 10px; margin: 0;
+  min-height: 44px; padding: 0 16px 0 14px; line-height: 1.2; font-weight: 400;
+}
+.field .chip input { flex: none; margin: 0; }
+.field legend { padding: 0; }
+
+/* Footer: brand, credit and social icons on the left; legal links stacked on the right */
+.site-footer .footer-inner { display: flex; flex-direction: column; gap: 28px; }
+.footer-main { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.footer-main .footer-meta { margin: 0; font-size: 14px; }
+.credit { display: inline-flex; align-items: flex-start; gap: 10px; margin: 0; font-size: 14px; color: var(--sage); }
+.credit .factory { flex: none; margin-top: 1px; color: var(--sage); }
+.credit a { color: var(--cream); white-space: nowrap; }
+.credit a:hover { color: var(--pink); }
+.social { display: flex; gap: 10px; margin-top: 8px; }
+.social a {
+  width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--sage);
+  display: inline-flex; align-items: center; justify-content: center; color: var(--cream);
+}
+.social a:hover { color: var(--forest); background: var(--pink); border-color: var(--pink); }
+.footer-legal { display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
+.footer-legal a, .footer-legal button {
+  color: var(--cream); display: inline-flex; align-items: center; min-height: 40px;
+  font: inherit; font-size: 15px; background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer;
+}
+.footer-legal a:hover, .footer-legal button:hover { color: var(--pink); }
+@media (min-width: 600px) {
+  .site-footer .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-end; }
+  .footer-legal { align-items: flex-end; text-align: right; }
+}
+
+/* Phones: legal links sit above the social icons so the icons end up bottom left */
+@media (max-width: 599px) {
+  .site-footer .footer-inner { gap: 12px; }
+  .footer-main { display: contents; }
+  .footer-legal { order: 4; margin: 12px 0 4px; }
+  .footer-main .social { order: 5; }
+}
