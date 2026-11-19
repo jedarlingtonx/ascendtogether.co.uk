@@ -117,24 +117,21 @@
     </ol>
 
     <div class="forms-grid">
-      <!-- Placeholder form. Swap for the real form embed (HubSpot or Luma) once the stack is chosen. -->
-      <form id="seat" class="form-card form-card--dark js-placeholder-form" aria-labelledby="seat-title" novalidate>
+      <!--
+        Luma registration embed for evt-ZYcuPyDKiRFHqgM. site.js inserts the iframe once the
+        visitor accepts cookies, or when they press "Show the booking form".
+      -->
+      <section id="seat" class="form-card form-card--dark luma-embed" aria-labelledby="seat-title">
         <h3 id="seat-title">Ask for a seat</h3>
-        <div class="form-grid form-grid--2">
-          <div class="field"><label for="s-name">Name</label><input class="input" id="s-name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="s-email">Email</label><input class="input" id="s-email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="s-role">Role</label><input class="input" id="s-role" name="role" type="text" autocomplete="organization-title"></div>
-          <div class="field"><label for="s-co">Company <span class="hint">(or your own business)</span></label><input class="input" id="s-co" name="company" type="text" autocomplete="organization"></div>
-          <div class="field full"><label for="s-rec">Who recommended you? <span class="hint">(required)</span></label><input class="input" id="s-rec" name="recommended_by" type="text" required></div>
-          <div class="field full"><label for="s-q"><span class="tbc">[Short question TBC]</span> <span class="hint">(one or two lines)</span></label><textarea class="input" id="s-q" name="question" rows="3"></textarea></div>
-          <label class="check full"><input type="checkbox" name="consent" required>I agree to Ascend Together storing these details to review my request, as set out in the <a href="/privacy">privacy policy</a>.</label>
-          <div class="form-foot full">
-            <button class="btn" type="submit">Ask for a seat</button>
-            <small>Spam protection runs quietly in the background.</small>
+        <p>Registration runs through Luma and every request is approved by hand. The venue is only shared once you're confirmed.</p>
+        <div class="luma-frame js-luma-embed" data-src="https://luma.com/embed/event/evt-ZYcuPyDKiRFHqgM/simple">
+          <div class="luma-consent">
+            <p>The booking form is hosted by Luma, which may set cookies when it loads.</p>
+            <button class="btn" type="button" data-luma-load>Show the booking form</button>
+            <a href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Or open the event on Luma</a>
           </div>
         </div>
-        <p class="form-note" role="status" hidden data-thanks="Thanks, {name}. We'll be in touch within [X days]. (Concept only: nothing was sent.)"></p>
-      </form>
+      </section>
 
       <form id="interest" class="form-card form-card--line js-placeholder-form" aria-labelledby="interest-title" novalidate>
         <h3 id="interest-title">No introduction yet?</h3>

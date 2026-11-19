@@ -375,3 +375,16 @@ a.btn.luma-checkout--button {
   min-height: 48px !important; padding: 0 24px !important; line-height: 1.25 !important;
 }
 a.btn.luma-checkout--button:hover { background: var(--pink-hover) !important; }
+
+/* Luma registration embed */
+.luma-embed p { margin: 0 0 16px; }
+.luma-frame {
+  margin-top: 8px; border-radius: 14px; overflow: hidden;
+  background: var(--forest-deep); border: 1px solid var(--line);
+}
+.luma-frame iframe { display: block; width: 100%; height: 520px; border: 0; background: #FFFFFF; }
+.luma-frame.is-loaded { border-color: rgba(191, 203, 218, 0.53); }
+.luma-consent { padding: 24px 20px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.luma-consent p { margin: 0; font-size: 15px; color: var(--sage); }
+.luma-consent a { color: var(--pink); font-size: 15px; }
+@media (min-width: 600px) { .luma-frame iframe { height: 480px; } }

@@ -48,6 +48,22 @@
   // Cookie banner. The only third-party script is Luma's registration embed,
   // loaded once the visitor accepts. Until then the Luma button is a plain link.
   var KEY = 'at-cookie-consent';
+  var loadLumaEmbed = function () {
+    document.querySelectorAll('.js-luma-embed').forEach(function (box) {
+      if (box.querySelector('iframe')) return;
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-src');
+      f.title = 'Ask for a seat: Luma registration form';
+      f.setAttribute('allow', 'fullscreen; payment');
+      f.setAttribute('loading', 'lazy');
+      box.innerHTML = '';
+      box.appendChild(f);
+      box.classList.add('is-loaded');
+    });
+  };
+  document.querySelectorAll('[data-luma-load]').forEach(function (btn) {
+    btn.addEventListener('click', loadLumaEmbed);
+  });
   var loadLuma = function () {
     if (!document.querySelector('.luma-checkout--button') || document.getElementById('luma-checkout')) return;
     var s = document.createElement('script');
@@ -56,6 +72,7 @@
     s.async = true;
     document.body.appendChild(s);
     document.querySelectorAll('.luma-checkout--button').forEach(function (a) { a.removeAttribute('target'); });
+    loadLumaEmbed();
   };
   var banner = document.getElementById('cookie-banner');
   var read = function () { try { return localStorage.getItem(KEY); } catch (err) { return null; } };
