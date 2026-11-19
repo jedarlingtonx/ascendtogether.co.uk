@@ -501,3 +501,8 @@ section.promises { margin-top: 0; }
   .hero-grid .photo-frame { aspect-ratio: 16 / 9; }
   .hero-grid .hero-actions { margin: -36px 24px 0; }
 }
+
+/* Event card on the cream Join us section keeps its dark-card colours */
+.on-cream .event-card { color: var(--cream); }
+.on-cream .event-card .tbc { color: var(--sage); }
+.on-cream .event-card a:not(.btn) { color: var(--pink); }

@@ -131,12 +131,35 @@
         Luma registration embed for evt-ZYcuPyDKiRFHqgM. site.js inserts the iframe once the
         visitor accepts cookies, or when they press "Show the booking form".
       -->
-      <section id="seat" class="form-card form-card--dark luma-embed seat-card" aria-labelledby="seat-title">
-        <h3 id="seat-title">Ask for a seat</h3>
-        <p>Registration runs through Luma and every request is approved by hand. The venue is only shared once you're confirmed.</p>
-        <!-- Same Luma registration button as the Events page: opens Luma's registration form over the page. -->
-        <a class="btn luma-checkout--button" href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" data-luma-action="checkout" data-luma-event-id="evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Ask for a seat</a>
-      </section>
+      <article id="seat" class="event-card seat-card" aria-labelledby="seat-title">
+        <p class="label">Next evening</p>
+        <h3 id="seat-title" class="tbc">[TALK TOPIC]</h3>
+        <dl class="event-meta">
+          <div><dt>Date</dt><dd><span class="tbc">[DAY, DATE]</span> 2027</dd></div>
+          <div><dt>Time</dt><dd>7 to 9pm</dd></div>
+          <div><dt>Speaker</dt><dd class="tbc">[SPEAKER NAME]</dd></div>
+          <div><dt>Where</dt><dd><span class="tbc">[CITY]</span>, venue sent to members</dd></div>
+        </dl>
+        <h4>What to expect</h4>
+        <ul>
+          <li>A small group of 15 to 20 people</li>
+          <li>Hosted introductions, so nobody stands on their own</li>
+          <li>A talk with insights worth taking home</li>
+          <li class="tbc">[One more line from the copy]</li>
+        </ul>
+        <div class="event-book">
+          <p class="lock">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8BFA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <span>Registration is on Luma and needs approval. The venue is only shared with confirmed members.</span>
+          </p>
+          <!--
+            Luma registration button. Without the Luma script it is a plain link to the event page.
+            site.js loads embed.lu.ma/checkout-button.js only after the visitor accepts cookies,
+            which turns the link into Luma's in-page registration window.
+          -->
+          <a class="btn luma-checkout--button" href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" data-luma-action="checkout" data-luma-event-id="evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Ask for a seat</a>
+        </div>
+      </article>
 
       <form id="interest" class="form-card form-card--line js-placeholder-form" aria-labelledby="interest-title" novalidate>
         <h3 id="interest-title">No introduction yet?</h3>
