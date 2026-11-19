@@ -730,3 +730,15 @@ main.policy    { background-position: right -200px top -80px; }
 
 /* Back to top: arrow-only circle, matching the social icons */
 .to-top { width: 44px; height: 44px; padding: 0; gap: 0; justify-content: center; }
+
+/* Footer bottom: Back to top (left) and social icons (right) on one row,
+   then a line, then the Pixel North credit on its own row at the very bottom. */
+.footer-bottom { grid-template-columns: 1fr 1fr; background: none; padding-top: 0; row-gap: 20px; }
+.footer-bottom .credit {
+  grid-column: 1 / -1; order: 1; padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 760px) {
+  .footer-bottom { grid-template-columns: 1fr 1fr; }
+  .footer-bottom .credit { grid-column: 1 / -1; order: 1; }
+}
