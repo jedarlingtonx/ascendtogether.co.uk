@@ -585,3 +585,12 @@ main.policy    { background-position: right -200px top -80px; }
 .form-card--cream a { color: var(--forest); text-decoration: underline; text-underline-offset: 2px; }
 .form-card--cream a:hover { color: #B4466E; }
 .form-card--cream .form-note { border-color: var(--forest); }
+
+/* Reveal on scroll (added by site.js only; never applied for reduced motion) */
+.reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
