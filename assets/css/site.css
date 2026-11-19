@@ -390,3 +390,6 @@ a.btn.luma-checkout--button:hover { background: var(--pink-hover) !important; }
 .luma-consent p { margin: 0; font-size: 15px; color: var(--sage); }
 .luma-consent a { color: var(--pink); font-size: 15px; }
 @media (min-width: 600px) { .luma-frame iframe { height: 860px; } }
+
+/* Current page in the main navigation */
+.site-nav a[aria-current="page"] { color: var(--pink); }
