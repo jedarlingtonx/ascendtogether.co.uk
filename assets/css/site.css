@@ -366,3 +366,12 @@ textarea.input { min-height: 96px; resize: vertical; }
 .on-cream .form-card--dark .tbc { color: var(--sage); }
 .on-cream .form-card--dark a { color: var(--pink); }
 .on-cream .form-card--dark a:hover { color: var(--cream); }
+
+/* Keep the Luma button in site style if Luma's embed adds its own styles */
+a.btn.luma-checkout--button {
+  background: var(--pink) !important; color: var(--forest) !important;
+  border: 0 !important; border-radius: 999px !important; box-shadow: none !important;
+  font-family: var(--sans) !important; font-size: 16px !important; font-weight: 700 !important;
+  min-height: 48px !important; padding: 0 24px !important; line-height: 1.25 !important;
+}
+a.btn.luma-checkout--button:hover { background: var(--pink-hover) !important; }

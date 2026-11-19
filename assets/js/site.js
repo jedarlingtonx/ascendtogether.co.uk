@@ -45,26 +45,30 @@
     });
   });
 
-  // Luma placeholder buttons
-  document.querySelectorAll('.js-luma-placeholder').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var note = btn.closest('.event-card').querySelector('.js-luma-note');
-      if (note) note.hidden = false;
-    });
-  });
-
-  // Cookie banner. No tracking scripts exist yet; the choice is only remembered.
+  // Cookie banner. The only third-party script is Luma's registration embed,
+  // loaded once the visitor accepts. Until then the Luma button is a plain link.
   var KEY = 'at-cookie-consent';
+  var loadLuma = function () {
+    if (!document.querySelector('.luma-checkout--button') || document.getElementById('luma-checkout')) return;
+    var s = document.createElement('script');
+    s.id = 'luma-checkout';
+    s.src = 'https://embed.lu.ma/checkout-button.js';
+    s.async = true;
+    document.body.appendChild(s);
+    document.querySelectorAll('.luma-checkout--button').forEach(function (a) { a.removeAttribute('target'); });
+  };
   var banner = document.getElementById('cookie-banner');
   var read = function () { try { return localStorage.getItem(KEY); } catch (err) { return null; } };
   var write = function (v) { try { localStorage.setItem(KEY, v); } catch (err) { /* private mode */ } };
   if (banner) {
     if (!read()) banner.hidden = false;
+    if (read() === 'accepted') loadLuma();
     banner.addEventListener('click', function (e) {
       var choice = e.target.closest('[data-consent]');
       if (!choice) return;
       write(choice.getAttribute('data-consent'));
       banner.hidden = true;
+      if (choice.getAttribute('data-consent') === 'accepted') loadLuma();
     });
   }
   document.querySelectorAll('.js-cookie-settings').forEach(function (btn) {
