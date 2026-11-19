@@ -2,7 +2,7 @@
 
 Concept website for Ascend Together: a one-page, mobile-first static site built from the visual concept. Plain HTML, CSS and a little JavaScript, with no build step.
 
-**This is a concept.** The forms are placeholders and send nothing. The Events section has the real Luma registration button. Copy in `[square brackets]` is still to be written. The logo and fonts (Fraunces, DM Sans) are placeholders too. The whole site is set to `noindex` until launch.
+**This is a concept.** "Ask for a seat" is the real Luma registration embed, and the Events section has the Luma button. The other forms are placeholders and send nothing. Copy in `[square brackets]` is still to be written. The logo and fonts (Fraunces, DM Sans) are placeholders too. The whole site is set to `noindex` until launch.
 
 ## What's here
 
@@ -24,7 +24,7 @@ Concept website for Ascend Together: a one-page, mobile-first static site built 
 
 ## Going live later
 
-- **Luma:** the Events button links to the Luma event. `site.js` loads Luma's checkout script only after cookie consent; without it the button opens the event on luma.com. For a new event, change the event ID in the button's `href` and `data-luma-event-id`. Keep the Luma event set to require approval, with the location hidden until approved.
+- **Luma:** the Events button links to the Luma event. `site.js` loads Luma's checkout script only after cookie consent; without it the button opens the event on luma.com. The "Ask for a seat" embed (`.js-luma-embed`) loads after consent too, or when the visitor presses "Show the booking form". For a new event, change the event ID in the button's `href` and `data-luma-event-id`, and in the embed's `data-src` and fallback link. Keep the Luma event set to require approval, with the location hidden until approved.
 - **Forms:** replace each `.js-placeholder-form` with the chosen form embed (HubSpot, Luma or other).
 - **Launch:** remove the `noindex` meta tags, the `X-Robots-Tag` line in `_headers`, the `robots.txt` block and the concept bar at the top of `index.html`.
 
