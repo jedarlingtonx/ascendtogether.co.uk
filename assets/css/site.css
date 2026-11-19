@@ -561,3 +561,19 @@ main.policy    { background-position: right -200px top -80px; }
   .facts-section .facts li { padding: 24px 24px 26px; }
   .facts-section .facts strong { font-size: 24px; }
 }
+
+/* Breadcrumbs on sub-pages: Home › Page, just under the header line */
+.breadcrumbs { padding-top: 16px; }
+.breadcrumbs ol { list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 14px; letter-spacing: 0.02em; }
+.breadcrumbs li { display: inline-flex; align-items: center; gap: 10px; color: var(--sage); }
+.breadcrumbs li + li::before { content: "›"; color: var(--pink); font-size: 16px; line-height: 1; }
+.breadcrumbs a { color: var(--sage); text-decoration: none; padding: 6px 0; }
+.breadcrumbs a:hover, .breadcrumbs a:focus-visible { color: var(--pink); text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumbs [aria-current="page"] { color: var(--cream); }
+.breadcrumbs + main > .section:first-child { padding-top: 32px; }
+.policy .breadcrumbs { padding-top: 0; margin-bottom: 20px; }
+.policy .breadcrumbs ol { margin: 0; padding: 0; }
+@media (min-width: 960px) {
+  .breadcrumbs { padding-top: 24px; }
+  .breadcrumbs + main > .section:first-child { padding-top: 48px; }
+}
