@@ -17,7 +17,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="concept-bar" role="note"><strong>Concept site.</strong> Forms and bookings are placeholders and don't send anything yet.</div>
+<div class="concept-bar" role="note"><strong>Concept site.</strong> The forms are placeholders and don't send anything yet.</div>
 
 <header class="site-header">
   <div class="wrap header-inner">
@@ -177,17 +177,15 @@
         <div class="event-book">
           <p class="lock">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8BFA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-            <span>Registration needs approval. The venue is only shared with confirmed members.</span>
+            <span>Registration is on Luma and needs approval. The venue is only shared with confirmed members.</span>
           </p>
           <!--
-            Luma placeholder. To go live, replace this button with Luma's checkout embed:
-              <a href="https://lu.ma/event/evt-XXXX" class="luma-checkout--button" data-luma-action="checkout" data-luma-event-id="evt-XXXX">Request a seat</a>
-              <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
-            Set the Luma event to "Require approval" and hide the location until approved.
+            Luma registration button. Without the Luma script it is a plain link to the event page.
+            site.js loads embed.lu.ma/checkout-button.js only after the visitor accepts cookies,
+            which turns the link into Luma's in-page registration window.
           -->
-          <button class="btn js-luma-placeholder" type="button" data-luma-event-id="evt-PLACEHOLDER">Request a seat on Luma</button>
+          <a class="btn luma-checkout--button" href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" data-luma-action="checkout" data-luma-event-id="evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Ask for a seat</a>
         </div>
-        <p class="form-note js-luma-note" role="status" hidden>This is where Luma's registration window will open. Concept only: there is no live event yet.</p>
       </article>
       <div class="event-side">
         <div class="placeholder-box" role="img" aria-label="Speaker photo placeholder">Speaker photo</div>
@@ -286,7 +284,7 @@
 
 <div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
   <h2 id="cookie-title">A quick word on cookies</h2>
-  <p id="cookie-desc">We'd like to use cookies to see which posts bring people here. Nothing is tracked unless you say yes. <a href="/cookies">Cookie policy</a></p>
+  <p id="cookie-desc">We'd like to use cookies to see which posts bring people here, and to open Luma's booking window on this page. Nothing is loaded unless you say yes. <a href="/cookies">Cookie policy</a></p>
   <div class="cookie-actions">
     <button type="button" class="btn btn-dark" data-consent="accepted">Accept</button>
     <button type="button" class="btn-outline" data-consent="rejected">Reject</button>
