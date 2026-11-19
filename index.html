@@ -131,16 +131,11 @@
         Luma registration embed for evt-ZYcuPyDKiRFHqgM. site.js inserts the iframe once the
         visitor accepts cookies, or when they press "Show the booking form".
       -->
-      <section id="seat" class="form-card form-card--dark luma-embed" aria-labelledby="seat-title">
+      <section id="seat" class="form-card form-card--dark luma-embed seat-card" aria-labelledby="seat-title">
         <h3 id="seat-title">Ask for a seat</h3>
         <p>Registration runs through Luma and every request is approved by hand. The venue is only shared once you're confirmed.</p>
-        <div class="luma-frame js-luma-embed" data-src="https://luma.com/embed/event/evt-ZYcuPyDKiRFHqgM/simple">
-          <div class="luma-consent">
-            <p>The booking form is hosted by Luma, which may set cookies when it loads.</p>
-            <button class="btn" type="button" data-luma-load>Show the booking form</button>
-            <a href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Or open the event on Luma</a>
-          </div>
-        </div>
+        <!-- Same Luma registration button as the Events page: opens Luma's registration form over the page. -->
+        <a class="btn luma-checkout--button" href="https://luma.com/event/evt-ZYcuPyDKiRFHqgM" data-luma-action="checkout" data-luma-event-id="evt-ZYcuPyDKiRFHqgM" target="_blank" rel="noopener">Ask for a seat</a>
       </section>
 
       <form id="interest" class="form-card form-card--line js-placeholder-form" aria-labelledby="interest-title" novalidate>

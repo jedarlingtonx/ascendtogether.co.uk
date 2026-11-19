@@ -469,3 +469,35 @@ section.promises { margin-top: 0; }
 .footer-bottom .credit { display: block; text-align: center; }
 .footer-bottom .credit .factory { display: inline-block; vertical-align: -5px; margin: 0 8px 0 0; }
 .seal-row + main > .section:first-child { padding-top: 32px; }
+
+/* Home "Ask for a seat" card now holds the Luma button rather than the embed */
+.seat-card .btn { margin-top: 4px; }
+
+/* Phones: opened menu on cream with dark green text */
+@media (max-width: 959px) {
+  .site-nav.is-open { background: var(--cream); border-bottom: 1px solid rgba(31, 61, 43, 0.15); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); }
+  .site-nav.is-open li a:not(.btn) { color: var(--forest); border-bottom-color: rgba(31, 61, 43, 0.15); font-weight: 500; }
+  .site-nav.is-open li a:not(.btn):hover, .site-nav.is-open li a[aria-current="page"] { color: var(--forest); text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--pink); text-decoration-thickness: 2px; }
+}
+
+/* Phones: hero photo comes before the buttons, which float over its lower edge */
+@media (max-width: 959px) {
+  .hero-grid { gap: 0; }
+  .hero-grid > div:first-child { display: contents; }
+  .hero-grid .photo-frame { order: 1; margin-top: 12px; }
+  .hero-grid .hero-actions {
+    order: 2; position: relative; z-index: 1;
+    margin: -44px 16px 0; 
+  }
+  .hero-grid .hero-actions .btn,
+  .hero-grid .hero-actions .btn-ghost { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35); }
+  .hero-grid .hero-actions .btn-ghost { background: var(--forest); }
+}
+@media (max-width: 959px) {
+  .hero-grid .photo-frame { align-items: flex-start; }
+  .hero-grid .hero-actions { padding-bottom: 4px; }
+}
+@media (min-width: 600px) and (max-width: 959px) {
+  .hero-grid .photo-frame { aspect-ratio: 16 / 9; }
+  .hero-grid .hero-actions { margin: -36px 24px 0; }
+}
