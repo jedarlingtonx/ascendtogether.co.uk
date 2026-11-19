@@ -574,3 +574,14 @@ main.policy    { background-position: right -200px top -80px; }
   .breadcrumbs { padding-top: 24px; }
   .breadcrumbs + main > .section:first-child { padding-top: 48px; }
 }
+
+/* Get involved form on cream: dark green text, white fields */
+.form-card--cream { background: var(--cream); color: var(--forest); }
+.form-card--cream .field label, .form-card--cream .field legend { color: var(--forest); }
+.form-card--cream .input { background: #FFFFFF; color: var(--forest); border-color: var(--forest); }
+.form-card--cream .chip { border-color: rgba(31, 61, 43, 0.45); color: var(--forest); background: #FFFFFF; }
+.form-card--cream .chip:has(input:checked) { border-color: var(--pink); box-shadow: 0 0 0 1px var(--pink) inset; }
+.form-card--cream .check input { accent-color: var(--forest); }
+.form-card--cream a { color: var(--forest); text-decoration: underline; text-underline-offset: 2px; }
+.form-card--cream a:hover { color: #B4466E; }
+.form-card--cream .form-note { border-color: var(--forest); }
