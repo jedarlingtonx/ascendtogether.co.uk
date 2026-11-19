@@ -1,6 +1,6 @@
 # ascendtogether.co.uk
 
-Concept website for Ascend Together: a one-page, mobile-first static site built from the visual concept. Plain HTML, CSS and a little JavaScript, with no build step.
+Concept website for Ascend Together: a small, mobile-first static site built from the visual concept. Plain HTML, CSS and a little JavaScript, with no build step.
 
 **This is a concept.** "Ask for a seat" is the real Luma registration embed, and the Events section has the Luma button. The other forms are placeholders and send nothing. Copy in `[square brackets]` is still to be written. The logo and fonts (Fraunces, DM Sans) are placeholders too. The whole site is set to `noindex` until launch.
 
@@ -8,7 +8,8 @@ Concept website for Ascend Together: a one-page, mobile-first static site built 
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The one-page site: 01 Home, 02 Join us, 03 Events, 04 About, 05 Get involved, 06 Contact |
+| `index.html` | Home page: 01 Home, 02 Join us (Luma "Ask for a seat" embed), 05 Get involved |
+| `events.html`, `about.html`, `contact.html` | 03 Events, 04 About ("Why I started this") and 06 Contact, served at `/events`, `/about`, `/contact` |
 | `privacy.html`, `cookies.html`, `terms.html` | Policy page placeholders (served at `/privacy`, `/cookies`, `/terms`) |
 | `404.html` | Not-found page |
 | `assets/css/site.css` | All styles, mobile first, with breakpoints at 600px and 960px |
