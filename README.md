@@ -29,6 +29,7 @@ Concept website for Ascend Together: a small, mobile-first static site built fro
 - **Forms:** replace each `.js-placeholder-form` with the chosen form embed (HubSpot, Luma or other).
 - **Luma consent (staging):** `STAGING_AUTO_LOAD_LUMA` in `assets/js/site.js` is `true`, so Luma loads without waiting for cookie consent. Set it to `false` before launch.
 - **Social links:** replace the `href="#"` LinkedIn and Instagram links in each page's footer.
+- **Sharing preview:** `assets/img/og-image.png` (1200×630) is set as `og:image` and `twitter:image` on every page. The `og:url` and image URLs use `https://ascendtogether.pixel-north.co.uk`; change them to the live domain at launch.
 - **Launch:** remove the `noindex` meta tags, the `X-Robots-Tag` line in `_headers`, the `robots.txt` block and the concept bar at the top of `index.html`.
 
 ## Run it locally
